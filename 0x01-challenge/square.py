@@ -1,12 +1,14 @@
 #!/usr/bin/python3
+"""This module finds the perimeter and area of a square"""
+
 
 class square():
-    
+    """Class square calculates area and perimeter of a square."""
     width = 0
     height = 0
 
-    
     def __init__(self, *args, **kwargs):
+        """Initialization of width and height"""
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -15,10 +17,13 @@ class square():
         return self.width * self.height
 
     def PermiterOfMySquare(self):
+        """Perimeter of the square"""
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
+        """String magic representations"""
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
 
